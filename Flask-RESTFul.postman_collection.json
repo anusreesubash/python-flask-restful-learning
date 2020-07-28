@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "GET Authors",
+			"name": "GET all Authors",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -29,10 +29,44 @@
 			"response": []
 		},
 		{
+			"name": "GET Author",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/author/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"author",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "POST Author",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"anoopmd\",\n    \"email\": \"anoopmd@gmail.com\"\n}"
+				},
 				"url": {
 					"raw": "http://127.0.0.1:5000/api/author",
 					"protocol": "http",
@@ -57,7 +91,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:5000/api/author",
+					"raw": "http://127.0.0.1:5000/api/author/2",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -68,7 +102,8 @@
 					"port": "5000",
 					"path": [
 						"api",
-						"author"
+						"author",
+						"2"
 					]
 				}
 			},
@@ -78,9 +113,19 @@
 			"name": "Update Author",
 			"request": {
 				"method": "PUT",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"anoop2\",\n    \"email\": \"anoopmd@gmail.com\"\n}"
+				},
 				"url": {
-					"raw": "http://127.0.0.1:5000/api/author",
+					"raw": "http://127.0.0.1:5000/api/author/5",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -91,7 +136,8 @@
 					"port": "5000",
 					"path": [
 						"api",
-						"author"
+						"author",
+						"5"
 					]
 				}
 			},
